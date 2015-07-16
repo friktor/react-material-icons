@@ -794,6 +794,14 @@ var MorphIcon = React.createClass({
     return {};
   },
 
+  propTypes: {
+    icons: React.PropTypes.arrayOf(React.PropTypes.string),
+    custom: React.PropTypes.bool,
+    size: React.PropTypes.number,
+    shapes: React.PropTypes.object,
+    options: React.PropTypes.object,
+  },
+
   componentDidMount () {
     var box = React.findDOMNode(this.refs.svgBox);
     var options = this.props.options ? this.props.options : {};
@@ -811,11 +819,6 @@ var MorphIcon = React.createClass({
   },
 
   render() {
-    var isArray=(val) => { return Object.prototype.toString.call(val) == '[object Array]'; }
-
-    if (!this.props.icons || !isArray(this.props.icons))
-      console.error(new Error('Icons property must be array type'));
-
     if (this.props.custom == true) var icons = this.makeIcons(this.props.shapes);
     else var icons = this.makeIcons(this.shapes);
 

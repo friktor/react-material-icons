@@ -800,6 +800,14 @@ var MorphIcon = React.createClass({displayName: "MorphIcon",
     this.Morph = new SVGMorpheus(box, options);
   },
 
+  propTypes: {
+    icons: React.PropTypes.arrayOf(React.PropTypes.string),
+    custom: React.PropTypes.bool,
+    size: React.PropTypes.number,
+    shapes: React.PropTypes.object,
+    options: React.PropTypes.object,
+  },
+
   to:function(icon) {
     this.Morph.to(icon);
   },
