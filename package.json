@@ -1,0 +1,34 @@
+{
+  "name": "react-material-icons",
+  "version": "0.1.0",
+  "description": "React Component with google material icons + morpheus effect.",
+  "main": "index.compiled.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friktor/react-material-icons.git"
+  },
+  "keywords": [
+    "react",
+    "material",
+    "design",
+    "material",
+    "icons",
+    "react-material-icons",
+    "morpheus-svg"
+  ],
+  "author": "Anton Shramko <antonshramko@yandex.ru, dev@dashline.pw>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/friktor/react-material-icons/issues"
+  },
+  "dependencies": {
+    "react": ">=0.13"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "homepage": "https://github.com/friktor/react-material-icons#readme"
+}
