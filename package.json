@@ -1,5 +1,5 @@
 {
-  "name": "react-material-icons",
+  "name": "react-morph-material-icons",
   "version": "0.1.0",
   "description": "React Component with google material icons + morpheus effect.",
   "main": "index.compiled.js",
@@ -16,7 +16,7 @@
     "design",
     "material",
     "icons",
-    "react-material-icons",
+    "react-morph-material-icons",
     "morpheus-svg"
   ],
   "author": "Anton Shramko <antonshramko@yandex.ru, dev@dashline.pw>",
