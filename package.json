@@ -30,5 +30,5 @@
   "browserify-shim": {
     "react": "global:React"
   },
-  "homepage": "https://github.com/friktor/react-material-icons#readme"
+  "homepage": "http://friktor.github.io/react-material-icons/"
 }
