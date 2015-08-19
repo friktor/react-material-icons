@@ -2,9 +2,10 @@
   "name": "react-morph-material-icons",
   "version": "0.4.0",
   "description": "React Component with google material icons + morpheus effect.",
-  "main": "index.compiled.js",
+  "main": "build/react-material-icons.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/ --compact false -d build/"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,12 @@
   "bugs": {
     "url": "https://github.com/friktor/react-material-icons/issues"
   },
-  "dependencies": {
-    "react": ">=0.13"
-  },
   "readmeFilename": "README.md",
   "browserify-shim": {
     "react": "global:React"
   },
-  "homepage": "http://friktor.github.io/react-material-icons/"
+  "homepage": "http://friktor.github.io/react-material-icons/",
+  "devDependencies": {
+    "babel": "^5.8.21"
+  }
 }
