@@ -813,8 +813,8 @@ var MorphIcon = React.createClass({
   },
 
   makeIcons(shapes) {
-    return this.props.icons.map((icon) => {
-      return <g id={icon} dangerouslySetInnerHTML={{__html: shapes[icon]}}></g>
+    return this.props.icons.map((icon, i) => {
+      return <g id={icon} key={i} dangerouslySetInnerHTML={{__html: shapes[icon]}}></g>
     });
   },
 
