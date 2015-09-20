@@ -11,6 +11,7 @@ import React from "react";
 
 export default class MorphIcon extends React.Component {
   constructor() {
+    super();
     /* set default shapes */
     this.shapes = shapes;
   }
