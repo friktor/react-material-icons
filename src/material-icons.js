@@ -1,3 +1,4 @@
+/* */ 
 import SVGMorpheus from "morpheus-svg";
 import shapes from "./shapes";
 import React from "react";
@@ -32,7 +33,7 @@ export default class MorphIcon extends React.Component {
 
   componentDidMount() {
     /* find target node */
-    var props = this.props, container = this.findDOMNode(this.refs.svgBox);
+    var props = this.props, container = this.refs.svgBox.getDOMNode();
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
