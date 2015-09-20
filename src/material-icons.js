@@ -1,4 +1,4 @@
-import SVGMorpheus from "svg-morpheus";
+import SVGMorpheus from "morpheus-svg";
 import shapes from "./shapes";
 import React from "react";
 

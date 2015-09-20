@@ -22,8 +22,8 @@ System.config({
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.24",
     "core-js": "npm:core-js@1.1.4",
+    "morpheus-svg": "github:friktor/morpheus-svg@master",
     "react": "npm:react@0.13.3",
-    "svg-morpheus": "github:friktor/SVG-Morpheus@0.1.8",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.5.0"
     },
