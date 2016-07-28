@@ -1,20 +1,26 @@
-/* */ 
-import SVGMorpheus from "morpheus-svg";
-import shapes from "./shapes";
+/* */
+import SVGMorpheus from "svg-morpheus";
 import React from "react";
 
 
 /*
 @name: MorphIcon
-@desc: component for handle & actions 
+@desc: component for handle & actions
        for morph change icon effect.
 */
 
 export default class MorphIcon extends React.Component {
+  static propTypes = {
+    shapes: React.PropTypes.objectOf(React.PropTypes.string),
+    style: React.PropTypes.object,
+    size: React.PropTypes.number
+  };
+
   constructor() {
     super();
-    /* set default shapes */
-    this.shapes = shapes;
+
+    this.morph = this.make.bind(this);
+    this.make = this.make.bind(this);
   }
 
   morph(icon) {
@@ -33,7 +39,7 @@ export default class MorphIcon extends React.Component {
 
   componentDidMount() {
     /* find target node */
-    var props = this.props, container = this.refs.svgBox.getDOMNode();
+    var props = this.props, container = React.findDOMNode(this.refs.svgBox);
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
@@ -41,19 +47,18 @@ export default class MorphIcon extends React.Component {
   }
 
   render() {
-    var props = this.props;
+    var {props, make} = this;
     /* make svg ions variantions */
-    if (props.custom) var icons = this.make(props.shapes);
-    else var icons = this.make(this.shapes);
+    var icons = make(props.shapes);
     /* calc size */
-    var size = this.props.size || 25;
+    var size = props.size || 25;
     /* svg container props attrs */
     var attrs = {
       xmlns: "http://www.w3.org/2000/svg",
       width: size, height: size,
       viewBox: "0 0 24 24",
       style: props.style,
-      ref: "svgBox",
+      ref: "svgBox"
     };
 
     /* complete handled svg with morphs set */

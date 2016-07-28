@@ -2,11 +2,8 @@
   "name": "react-morph-material-icons",
   "version": "0.6.0",
   "description": "React Component with google material icons + morpheus effect.",
-  "main": "src/material-icons.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src/ --compact false -d build/"
-  },
+  "main": "build/material-icons.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/friktor/react-material-icons.git"
@@ -21,28 +18,22 @@
     "react-component",
     "morpheus-svg"
   ],
-  "author": "Anton Shramko <antonshramko@yandex.ru, dev@dashline.pw>",
+  "author": "Anton Shramko <antonshramko@yandex.ru>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/friktor/react-material-icons/issues"
   },
   "readmeFilename": "README.md",
   "homepage": "http://friktor.github.io/react-material-icons/",
-  "jspm": {
-    "registry": "jspm",
-    "main": "material-icons.js",
-    "format": "es6",
-    "directories": {
-      "lib": "src"
-    },
-    "dependencies": {
-      "morpheus-svg": "github:friktor/morpheus-svg@master",
-      "react": "npm:react@^0.13.3"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
+  "dependencies": {
+    "react": "^15.2.1",
+    "svg-morpheus": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
   }
 }
