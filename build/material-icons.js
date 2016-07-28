@@ -4,11 +4,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _svgMorpheus = require("svg-morpheus");
 
 var _svgMorpheus2 = _interopRequireDefault(_svgMorpheus);
+
+var _reactDom = require("react-dom");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _react = require("react");
 
@@ -63,7 +69,7 @@ var MorphIcon = function (_React$Component) {
     value: function componentDidMount() {
       /* find target node */
       var props = this.props,
-          container = _react2.default.findDOMNode(this.refs.svgBox);
+          container = _reactDom2.default.findDOMNode(this.refs.svgBox);
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */
@@ -81,7 +87,6 @@ var MorphIcon = function (_React$Component) {
       var size = props.size || 25;
       /* svg container props attrs */
       var attrs = {
-        xmlns: "http://www.w3.org/2000/svg",
         width: size, height: size,
         viewBox: "0 0 24 24",
         style: props.style,
@@ -91,7 +96,7 @@ var MorphIcon = function (_React$Component) {
       /* complete handled svg with morphs set */
       return _react2.default.createElement(
         "svg",
-        attrs,
+        _extends({ xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" }, attrs),
         icons
       );
     }

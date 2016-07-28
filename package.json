@@ -1,6 +1,6 @@
 {
   "name": "react-morph-material-icons",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "React Component with google material icons + morpheus effect.",
   "main": "build/material-icons.js",
   "scripts": {},
@@ -27,6 +27,7 @@
   "homepage": "http://friktor.github.io/react-material-icons/",
   "dependencies": {
     "react": "^15.2.1",
+    "react-dom": "^15.2.1",
     "svg-morpheus": "git+https://github.com/alexk111/SVG-Morpheus.git"
   },
   "devDependencies": {

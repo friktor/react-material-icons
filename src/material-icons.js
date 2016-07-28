@@ -1,5 +1,6 @@
 /* */
 import SVGMorpheus from "svg-morpheus";
+import ReactDOM from "react-dom";
 import React from "react";
 
 
@@ -39,7 +40,7 @@ export default class MorphIcon extends React.Component {
 
   componentDidMount() {
     /* find target node */
-    var props = this.props, container = React.findDOMNode(this.refs.svgBox);
+    var props = this.props, container = ReactDOM.findDOMNode(this.refs.svgBox);
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
@@ -54,7 +55,6 @@ export default class MorphIcon extends React.Component {
     var size = props.size || 25;
     /* svg container props attrs */
     var attrs = {
-      xmlns: "http://www.w3.org/2000/svg",
       width: size, height: size,
       viewBox: "0 0 24 24",
       style: props.style,
@@ -62,6 +62,10 @@ export default class MorphIcon extends React.Component {
     };
 
     /* complete handled svg with morphs set */
-    return <svg {...attrs}>{icons}</svg>;
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...attrs}>
+        {icons}
+      </svg>
+    );
   }
 }
