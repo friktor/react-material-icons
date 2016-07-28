@@ -33,8 +33,8 @@ export default class MorphIcon extends React.Component {
     /* make path icons for morph actions (serealize) */
     return this.props.icons.map((icon, i) => {
       /* attrs props for icon */
-      var attrs = { id: icon, key: i, dangerouslySetInnerHTML: { __html: shapes[icon] } };
-      return <g {...attrs}></g>;
+      var attrs = { id: icon, key: 'shape-icon-sd-'+i };
+      return <g {...attrs}>{shapes[icon]}</g>;
     });
   }
 

@@ -60,8 +60,12 @@ var MorphIcon = function (_React$Component) {
       /* make path icons for morph actions (serealize) */
       return this.props.icons.map(function (icon, i) {
         /* attrs props for icon */
-        var attrs = { id: icon, key: i, dangerouslySetInnerHTML: { __html: shapes[icon] } };
-        return _react2.default.createElement("g", attrs);
+        var attrs = { id: icon, key: 'shape-icon-sd-' + i };
+        return _react2.default.createElement(
+          "g",
+          attrs,
+          shapes[icon]
+        );
       });
     }
   }, {
