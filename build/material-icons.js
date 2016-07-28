@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _svgMorpheus = require("svg-morpheus");
@@ -57,16 +55,21 @@ var MorphIcon = function (_React$Component) {
   }, {
     key: "make",
     value: function make(shapes) {
+      console.log(this.props.icons);
+
       /* make path icons for morph actions (serealize) */
-      return this.props.icons.map(function (icon, i) {
+      var embedded = this.props.icons.map(function (icon, i) {
         /* attrs props for icon */
-        var attrs = { id: icon, key: 'shape-icon-sd-' + i };
         return _react2.default.createElement(
           "g",
-          attrs,
+          { id: icon, key: "shape-" + icon + "-sd-" + i },
           shapes[icon]
         );
       });
+
+      console.log(embedded);
+
+      return embedded;
     }
   }, {
     key: "componentDidMount",
@@ -100,7 +103,7 @@ var MorphIcon = function (_React$Component) {
       /* complete handled svg with morphs set */
       return _react2.default.createElement(
         "svg",
-        _extends({ xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" }, attrs),
+        attrs,
         icons
       );
     }
@@ -110,7 +113,6 @@ var MorphIcon = function (_React$Component) {
 }(_react2.default.Component);
 
 MorphIcon.propTypes = {
-  shapes: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.string),
   style: _react2.default.PropTypes.object,
   size: _react2.default.PropTypes.number
 };

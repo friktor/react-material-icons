@@ -12,7 +12,6 @@ import React from "react";
 
 export default class MorphIcon extends React.Component {
   static propTypes = {
-    shapes: React.PropTypes.objectOf(React.PropTypes.string),
     style: React.PropTypes.object,
     size: React.PropTypes.number
   };
@@ -30,12 +29,17 @@ export default class MorphIcon extends React.Component {
   }
 
   make(shapes) {
+    console.log(this.props.icons);
+
     /* make path icons for morph actions (serealize) */
-    return this.props.icons.map((icon, i) => {
+    var embedded = this.props.icons.map((icon, i) => {
       /* attrs props for icon */
-      var attrs = { id: icon, key: 'shape-icon-sd-'+i };
-      return <g {...attrs}>{shapes[icon]}</g>;
+      return <g id={icon} key={`shape-${icon}-sd-${i}`}>{shapes[icon]}</g>;
     });
+
+    console.log(embedded);
+
+    return embedded;
   }
 
   componentDidMount() {
@@ -63,7 +67,7 @@ export default class MorphIcon extends React.Component {
 
     /* complete handled svg with morphs set */
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...attrs}>
+      <svg {...attrs}>
         {icons}
       </svg>
     );
