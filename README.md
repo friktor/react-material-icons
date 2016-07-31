@@ -1,5 +1,6 @@
 ## React Material Icons
 __________________
+
 Simple component for animated Material Icons in React. Fine works with react 15.0 or later.
 
 ## Usage & Docs
@@ -20,7 +21,9 @@ npm install git+https://github.com/friktor/react-material-icons # from github
 # What about icons?
 Icons by default compile separately from library component. File with icon shapes very big. But you can import module with shapes from:
 
-```react-morph-material-icons/build/shapes```
+```
+react-morph-material-icons/build/shapes
+```
 
 Icons sorting by category, you can use full category, or get required icons and create object set, example:
 
