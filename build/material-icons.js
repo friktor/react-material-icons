@@ -74,7 +74,6 @@ var MorphIcon = function (_React$Component) {
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */
-      console.log(options);
       this.Morph = new _svgMorpheus2.default(container, options);
     }
   }, {
@@ -106,6 +105,7 @@ var MorphIcon = function (_React$Component) {
 }(_react2.default.Component);
 
 MorphIcon.propTypes = {
+  shapes: _react2.default.PropTypes.objectOf(_react2.default.propTypes.string),
   style: _react2.default.PropTypes.object,
   size: _react2.default.PropTypes.number
 };
