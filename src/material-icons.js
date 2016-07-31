@@ -20,7 +20,7 @@ export default class MorphIcon extends React.Component {
   constructor() {
     super();
 
-    this.morph = this.make.bind(this);
+    this.morph = this.morph.bind(this);
     this.make = this.make.bind(this);
   }
 

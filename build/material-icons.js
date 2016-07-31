@@ -43,7 +43,7 @@ var MorphIcon = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(MorphIcon).call(this));
 
-    _this.morph = _this.make.bind(_this);
+    _this.morph = _this.morph.bind(_this);
     _this.make = _this.make.bind(_this);
     return _this;
   }
