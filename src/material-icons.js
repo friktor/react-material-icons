@@ -32,19 +32,17 @@ export default class MorphIcon extends React.Component {
     console.log(this.props.icons);
 
     /* make path icons for morph actions (serealize) */
-    var embedded = this.props.icons.map((icon, i) => {
-      /* attrs props for icon */
-      return <g id={icon} key={`shape-${icon}-sd-${i}`}>{shapes[icon]}</g>;
-    });
+    var embedded = "";
+    Object.keys(shapes).forEach(key => embedded += shapes[key]);
 
     console.log(embedded);
-
     return embedded;
   }
 
   componentDidMount() {
     /* find target node */
     var props = this.props, container = ReactDOM.findDOMNode(this.refs.svgBox);
+    console.log(container);
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
@@ -62,14 +60,14 @@ export default class MorphIcon extends React.Component {
       width: size, height: size,
       viewBox: "0 0 24 24",
       style: props.style,
-      ref: "svgBox"
+      ref: "svgBox",
+      // Set inner html shapes
+      dangerouslySetInnerHTML: { __html: icons }
     };
 
     /* complete handled svg with morphs set */
     return (
-      <svg {...attrs}>
-        {icons}
-      </svg>
+      <svg {...attrs}></svg>
     );
   }
 }

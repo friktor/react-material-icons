@@ -1,5 +1,5 @@
 'use strict';
-
+// Version of inner html warning mode
 var gulp = require('gulp'),
     babel = require('gulp-babel');
 
