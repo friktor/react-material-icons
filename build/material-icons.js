@@ -58,17 +58,12 @@ var MorphIcon = function (_React$Component) {
       console.log(this.props.icons);
 
       /* make path icons for morph actions (serealize) */
-      var embedded = this.props.icons.map(function (icon, i) {
-        /* attrs props for icon */
-        return _react2.default.createElement(
-          "g",
-          { id: icon, key: "shape-" + icon + "-sd-" + i },
-          shapes[icon]
-        );
+      var embedded = "";
+      Object.keys(shapes).forEach(function (key) {
+        return embedded += shapes[key];
       });
 
       console.log(embedded);
-
       return embedded;
     }
   }, {
@@ -77,6 +72,7 @@ var MorphIcon = function (_React$Component) {
       /* find target node */
       var props = this.props,
           container = _reactDom2.default.findDOMNode(this.refs.svgBox);
+      console.log(container);
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */
@@ -97,15 +93,13 @@ var MorphIcon = function (_React$Component) {
         width: size, height: size,
         viewBox: "0 0 24 24",
         style: props.style,
-        ref: "svgBox"
+        ref: "svgBox",
+        // Set inner html shapes
+        dangerouslySetInnerHTML: { __html: icons }
       };
 
       /* complete handled svg with morphs set */
-      return _react2.default.createElement(
-        "svg",
-        attrs,
-        icons
-      );
+      return _react2.default.createElement("svg", attrs);
     }
   }]);
 
