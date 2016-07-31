@@ -27,7 +27,6 @@ export default class MorphIcon extends React.Component {
 
   morph(icon) {
     /* morph to next status by ion */
-    console.log(this.Morph);
     this.Morph.to(icon);
   }
 

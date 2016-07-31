@@ -52,7 +52,6 @@ var MorphIcon = function (_React$Component) {
     key: "morph",
     value: function morph(icon) {
       /* morph to next status by ion */
-      console.log(this.Morph);
       this.Morph.to(icon);
     }
   }, {
