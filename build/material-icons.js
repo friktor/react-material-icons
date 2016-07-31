@@ -52,7 +52,8 @@ var MorphIcon = function (_React$Component) {
     key: "morph",
     value: function morph(icon) {
       /* morph to next status by ion */
-      // this.Morph.to(icon);
+      console.log(this.Morph);
+      this.Morph.to(icon);
     }
   }, {
     key: "make",
@@ -73,7 +74,8 @@ var MorphIcon = function (_React$Component) {
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */
-      // this.Morph = new SVGMorpheus(container, options);
+      console.log(options);
+      this.Morph = new _svgMorpheus2.default(container, options);
     }
   }, {
     key: "render",
