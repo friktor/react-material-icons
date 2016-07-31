@@ -33,7 +33,7 @@ import icons from "react-morph-material-icons/build/shapes";
 var myCollectionOfCategory = icons.action;
 /* or */
 var myCollection = {
-  'my-name-id-for-icon': icons.action.3d_rotation
+  'my-name-id-for-icon': icons.action['3d_rotation']
 };
 ```
 
