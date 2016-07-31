@@ -1,6 +1,6 @@
 {
   "name": "react-morph-material-icons",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "React Component with google material icons + morpheus effect.",
   "main": "build/material-icons.js",
   "scripts": {},
