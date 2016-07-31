@@ -55,15 +55,11 @@ var MorphIcon = function (_React$Component) {
   }, {
     key: "make",
     value: function make(shapes) {
-      console.log(this.props.icons);
-
       /* make path icons for morph actions (serealize) */
       var embedded = "";
       Object.keys(shapes).forEach(function (key) {
         return embedded += shapes[key];
       });
-
-      console.log(embedded);
       return embedded;
     }
   }, {
@@ -72,7 +68,6 @@ var MorphIcon = function (_React$Component) {
       /* find target node */
       var props = this.props,
           container = _reactDom2.default.findDOMNode(this.refs.svgBox);
-      console.log(container);
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */

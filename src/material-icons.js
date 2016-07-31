@@ -29,20 +29,15 @@ export default class MorphIcon extends React.Component {
   }
 
   make(shapes) {
-    console.log(this.props.icons);
-
     /* make path icons for morph actions (serealize) */
     var embedded = "";
     Object.keys(shapes).forEach(key => embedded += shapes[key]);
-
-    console.log(embedded);
     return embedded;
   }
 
   componentDidMount() {
     /* find target node */
     var props = this.props, container = ReactDOM.findDOMNode(this.refs.svgBox);
-    console.log(container);
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
