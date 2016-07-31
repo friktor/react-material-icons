@@ -27,6 +27,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* */
 
 
+window.SVGMorpheus = _svgMorpheus2.default;
+
 /*
 @name: MorphIcon
 @desc: component for handle & actions
@@ -50,7 +52,7 @@ var MorphIcon = function (_React$Component) {
     key: "morph",
     value: function morph(icon) {
       /* morph to next status by ion */
-      this.Morph.to(icon);
+      // this.Morph.to(icon);
     }
   }, {
     key: "make",
@@ -71,7 +73,7 @@ var MorphIcon = function (_React$Component) {
       /* calc options */
       var options = props.options ? props.options : {};
       /* make morph instance */
-      this.Morph = new _svgMorpheus2.default(container, options);
+      // this.Morph = new SVGMorpheus(container, options);
     }
   }, {
     key: "render",

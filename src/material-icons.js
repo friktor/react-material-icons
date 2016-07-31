@@ -3,6 +3,7 @@ import SVGMorpheus from "svg-morpheus";
 import ReactDOM from "react-dom";
 import React from "react";
 
+window.SVGMorpheus = SVGMorpheus;
 
 /*
 @name: MorphIcon
@@ -25,7 +26,7 @@ export default class MorphIcon extends React.Component {
 
   morph(icon) {
     /* morph to next status by ion */
-    this.Morph.to(icon);
+    // this.Morph.to(icon);
   }
 
   make(shapes) {
@@ -41,7 +42,7 @@ export default class MorphIcon extends React.Component {
     /* calc options */
     var options = props.options ? props.options : {};
     /* make morph instance */
-    this.Morph = new SVGMorpheus(container, options);
+    // this.Morph = new SVGMorpheus(container, options);
   }
 
   render() {
