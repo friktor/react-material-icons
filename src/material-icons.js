@@ -13,7 +13,7 @@ window.SVGMorpheus = SVGMorpheus;
 
 export default class MorphIcon extends React.Component {
   static propTypes = {
-    shapes: React.PropTypes.objectOf(React.propTypes.string),
+    shapes: React.PropTypes.objectOf(React.PropTypes.string),
     style: React.PropTypes.object,
     size: React.PropTypes.number
   };
